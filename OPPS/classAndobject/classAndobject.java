@@ -1,6 +1,6 @@
 package OPPS.classAndobject;
 
-class students {
+class students {//thish is class
     String name;
     String age;
     public void  print_info(){
