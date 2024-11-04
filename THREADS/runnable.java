@@ -1,6 +1,4 @@
 package THREADS;
-
-
 class A implements Runnable{
     public void run(){
         for(int i=0;i<=5;i++){
@@ -15,6 +13,7 @@ class A implements Runnable{
 }
 
 class B implements Runnable{
+    
     public void run(){
         for(int i=0;i<=5;i++){
             System.out.println("hello");
@@ -26,17 +25,15 @@ class B implements Runnable{
         }
     }
 }
-
-
-public class RunnableVsthreads {
+public class runnable {
     public static void main(String[] args) {
-        A obj1=new A();
-        B obj2=new B();
+        Runnable  obj1=new A();
+        Runnable  obj2=new B();
 
         //System.out.println(obj1.getName());
         //obj2.setPriority(Thread.MAX_PRIORITY);
-        Thread t1=new Thread();
-        Thread t2= new Thread();
+        Thread t1=new Thread(obj1);
+        Thread t2=new Thread(obj2);
         t1.start();
         t2.start();
     }

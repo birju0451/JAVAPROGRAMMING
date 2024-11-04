@@ -1,4 +1,7 @@
 //whenever you get object of a class it will call the constructor of subclass and super class both ,and here A is super class and B is the subclas 
+
+
+
 class A{
     public A(){
         System.out.println("in A");
